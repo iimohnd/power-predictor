@@ -75,7 +75,7 @@ export default function DeviceInputForm() {
     };
 
     console.log("✅ Saved entry:", newEntry);
-    alert("✅ تم حفظ السجل في جهازك!");
+    alert("شكرا لاستعمالك موقعنا سيتم احتساب فاتورتك قريبا! ");
 
     setFormData(newEntry);
 
