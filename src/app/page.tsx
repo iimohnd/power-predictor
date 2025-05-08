@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
 
-const cities = ["Muscat", "Salalah", "Nizwa", "Sohar", "Sur", "Bahla", "Ibri", "Rustaq"];
+const cities = ["Muscat", "Salalah", "Nizwa", "Sohar", "Sur", "Bahla", "Ibri", "Rustaq", "Liwa", "Ibra", "Duqm", "Khasab", "Barka", "Saham", "Musandam", "Al Batinah", "Al Dakhiliyah"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const fullDeviceList = [
