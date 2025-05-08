@@ -18,7 +18,7 @@ export default function HistoryPage() {
         {history.length === 0 ? (
           <p className="text-gray-600">No records found yet.</p>
         ) : (
-          history.map((entry, any, index) => (
+          history.map((entry: any, index) => (
             <Card key={index} className="shadow border border-gray-200">
               <CardContent className="p-6 space-y-4">
                 <h2 className="text-xl font-semibold">Entry #{index + 1}</h2>
