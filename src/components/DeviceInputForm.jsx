@@ -65,6 +65,7 @@ export default function DeviceInputForm() {
       lastBill,
       devices,
     };
+    console.log("✅ Saved entry:", newEntry);
 
     setFormData(newEntry);
 
