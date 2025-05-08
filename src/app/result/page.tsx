@@ -19,7 +19,7 @@ const RATE_TIERS = [
 function calculateConsumption(devices: Device[]): number {
   let totalKw = 0;
   devices.forEach((device) => {
-    const watts = parseFloat(device.watts) || 1000;
+    const watts = parseFloat(device.watts ?? "0") || 1000;
     const hours = parseFloat(device.hours) || 0;
     const qty = parseInt(device.quantity) || 1;
     const dailyKw = (watts / 1000) * hours * qty;
