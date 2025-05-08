@@ -34,7 +34,7 @@ function calculateBill(kw) {
 
 export default function ResultPage() {
   const { formData } = usePower();
-  const { personCount, selectedCity, selectedMonth, lastBill, devices } = formData;
+  const { personCount, selectedCity, selectedMonth, devices } = formData;
 
   const estimatedKw = calculateConsumption(devices);
   const estimatedCost = calculateBill(estimatedKw);

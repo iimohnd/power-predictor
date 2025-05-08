@@ -32,7 +32,7 @@ const fullDeviceList = [
 
 export default function DeviceInputForm() {
   const router = useRouter();
-  const { formData, setFormData } = usePower();
+  const { setFormData } = usePower();
 
   const [devices, setDevices] = useState([]);
   const [personCount, setPersonCount] = useState(1);
