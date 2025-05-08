@@ -28,7 +28,7 @@ export default function HistoryPage() {
                 <p><strong>Bill:</strong> {entry.lastBill} OMR</p>
                 <p><strong>Devices:</strong></p>
                 <ul className="list-disc pl-6 space-y-1">
-                  {entry.devices.map((dev, i) => (
+                  {entry.devices.map((dev: any, i) => (
                     <li key={i}>
                       <strong>{dev.quantity}× {dev.name}</strong>
                       {dev.hours && ` – ${dev.hours} h/day`}
