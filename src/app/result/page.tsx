@@ -2,13 +2,21 @@
 import { usePower } from "@/context/PowerContext";
 import { Card, CardContent } from "@/components/ui/card";
 
+interface Device {
+  name: string;
+  hours: string;
+  quantity: string;
+  customName?: string;
+  watts?: string;
+}
+
 const RATE_TIERS = [
   { limit: 4000, rate: 0.014 },
   { limit: 6000, rate: 0.018 },
   { limit: Infinity, rate: 0.032 },
 ];
 
-function calculateConsumption(devices) {
+function calculateConsumption(devices: Device[]): number {
   let totalKw = 0;
   devices.forEach((device) => {
     const watts = parseFloat(device.watts) || 1000;
@@ -20,7 +28,7 @@ function calculateConsumption(devices) {
   return totalKw * 0.7;
 }
 
-function calculateBill(kw) {
+function calculateBill(kw: number): number {
   let remaining = kw;
   let cost = 0;
   for (const tier of RATE_TIERS) {

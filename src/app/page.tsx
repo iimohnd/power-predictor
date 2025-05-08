@@ -30,17 +30,25 @@ const fullDeviceList = [
   "EV Charger", "Jacuzzi", "Electric Stove", "Radiator Heater", "Other"
 ];
 
+interface Device {
+  name: string;
+  hours: string;
+  quantity: string;
+  customName?: string;
+  watts?: string;
+}
+
 export default function DeviceInputForm() {
   const router = useRouter();
   const { setFormData } = usePower();
 
-  const [devices, setDevices] = useState([]);
+  const [devices, setDevices] = useState<Device[]>([]);
   const [personCount, setPersonCount] = useState(1);
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedMonth, setSelectedMonth] = useState("");
   const [lastBill, setLastBill] = useState("");
   const [search, setSearch] = useState("");
-  const [newDevice, setNewDevice] = useState({ name: "", hours: "", quantity: "", customName: "", watts: "" });
+  const [newDevice, setNewDevice] = useState<Device>({ name: "", hours: "", quantity: "", customName: "", watts: "" });
 
   const addDevice = () => {
     if (newDevice.name && newDevice.hours && newDevice.quantity) {
@@ -53,7 +61,7 @@ export default function DeviceInputForm() {
     }
   };
 
-  const removeDevice = (index) => {
+  const removeDevice = (index: number) => {
     setDevices(devices.filter((_, i) => i !== index));
   };
 
