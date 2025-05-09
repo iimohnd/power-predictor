@@ -48,7 +48,7 @@ export default function ResultPage() {
   const estimatedCost = calculateBill(estimatedKw);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-indigo-100 p-6">
+    <div className="min-h-screen bill-background p-6">
       <div className="max-w-4xl mx-auto space-y-6">
         <Card className="shadow-xl">
           <CardContent className="p-8 space-y-4">
