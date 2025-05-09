@@ -126,3 +126,9 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.first-page-bg {
+  background-image: url('/first-page-bg.jpg'); /* غيّرها إذا حاب صورة من الإنترنت */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

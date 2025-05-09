@@ -91,7 +91,7 @@ export default function DeviceInputForm() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-indigo-50 p-6">
+    <div className="min-h-screen first-page-bg p-6">
       <div className="max-w-6xl mx-auto space-y-10">
         {/* General Info */}
         <Card className="shadow-xl border border-indigo-200">
